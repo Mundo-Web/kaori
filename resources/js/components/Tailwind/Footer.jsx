@@ -114,7 +114,7 @@ const Footer = ({ socials, summary, generals }) => {
         <hr className="my-[5%]" />
         <section className="flex flex-col lg:flex-row gap-4 justify-between text-center lg:text-start">
           <p>
-            Copyright © 2023 Trasciende. Reservados todos los derechos.
+            Copyright © {new Date().getFullYear()} Trasciende. Reservados todos los derechos.
           </p>
           <div className="flex flex-col justify-center lg:justify-between md:flex-row gap-4">
             <button onClick={() => openModal(0)}>Terminos de servicios</button>

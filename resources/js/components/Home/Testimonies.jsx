@@ -6,6 +6,14 @@ const Testimonies = ({ testimonies, background = 'amber-400' }) => {
   const [currentTestimony, setCurrentTestimony] = useState(testimonies[0])
 
   return (
+    <>
+    <div className="p-[5%]">
+      <h2 className="text-3xl md:text-4xl font-medium tracking-tighter leading-tight">
+        <span className="text-slate-700">Lo que dicen nuestros </span>
+        <span className="font-bold text-pink-500">alumnos </span>
+        {/* <span className="text-slate-700">para todos</span> */}
+      </h2>
+    </div>
     <section className={`grid md:grid-cols-5 gap-8 bg-${background}`}>
       <div className="col-span-full md:col-span-2 w-full flex items-center justify-center order-last md:order-first">
         <div className="relative flex grow justify-center md:justify-start p-[5%] pb-0 md:p-0 md:px-[5%]  md:h-[calc(100%+64px)] md:-mt-16">
@@ -19,14 +27,14 @@ const Testimonies = ({ testimonies, background = 'amber-400' }) => {
       </div>
 
       <div className="col-span-full md:col-span-3 p-[5%] w-full flex flex-col items-center order-first md:order-last">
-        <div className="flex flex-col justify-center items-center max-w-full text-center md:text-left">
+        {/* <div className="flex flex-col justify-center items-center max-w-full text-center md:text-left">
           <div className="text-2xl font-semibold tracking-tight leading-snug text-gray-900">
             Lo que dicen nuestros alumnos
           </div>
           <div className="mt-2 text-sm leading-5 text-center text-gray-700">
             Conoce las experiencias de quienes han confiado en Trasciende. Sus testimonios muestran cómo lograron superar retos y alcanzar sus metas con nuestra guía.
           </div>
-        </div>
+        </div> */}
 
         <div className="self-stretch mt-8 text-xl md:text-2xl font-medium tracking-tighter text-center text-gray-900">
           <HtmlContent html={currentTestimony.description.replace(/\*(.*?)\*/g, '<span class="font-bold text-pink-500">$1</span>')} />
@@ -58,6 +66,7 @@ const Testimonies = ({ testimonies, background = 'amber-400' }) => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

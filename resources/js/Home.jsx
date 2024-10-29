@@ -25,7 +25,7 @@ const Home = ({ sliders, indicators, weare, courses, testimonies, articles }) =>
         <Courses courses={courses.slice(0, 3)} />
       }
       {
-        courses.slice(3, 7) > 0 &&
+        courses.slice(3, 7).length > 0 &&
         <MoreCourses courses={courses.slice(3, 7)} />
       }
       {

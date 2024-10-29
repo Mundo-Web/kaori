@@ -16,8 +16,8 @@ const Articles = ({articles}) => {
       <div className="flex flex-col justify-center w-full max-md:max-w-full">
         <div className="flex flex-wrap gap-6 justify-between items-center w-full max-md:max-w-full">
           <div className="self-stretch my-auto text-2xl sm:text-3xl md:text-4xl font-medium tracking-tighter text-slate-700 max-md:max-w-full">
-            Últimas noticias sobre
-            <span className="ms-1 font-bold">cursos y talleres</span>
+            
+            <span className="ms-1 font-bold line-clamp-2">Últimas noticias</span>
           </div>
           <div className="flex gap-3 justify-center items-center self-stretch my-auto">
             <button
