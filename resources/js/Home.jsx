@@ -26,7 +26,10 @@ const Home = ({ sliders, indicators, aboutKaori, courses, testimonies, articles,
         aboutKaori &&
         <Weare info={aboutKaori} />
       }
-      <AboutTrasciende details={details} />
+      {
+        details['about.video'] &&
+        <AboutTrasciende details={details} />
+      }
       {/* {
         courses.length > 0 &&
         <Courses courses={courses.slice(0, 3)} />
