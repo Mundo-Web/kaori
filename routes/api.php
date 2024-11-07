@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\TagController as AdminTagController;
 use App\Http\Controllers\Admin\WebDetailController as AdminWebDetailController;
 // Public
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CoverController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MessageController;
@@ -54,6 +55,8 @@ Route::post('/subscriptions', [SubscriptionController::class, 'save']);
 
 Route::get('/cover/{uuid}', [CoverController::class, 'full']);
 Route::get('/cover/thumbnail/{uuid}', [CoverController::class, 'thumbnail']);
+Route::get('/mailing/notify', [BlogController::class, 'notifyToday']);
+Route::delete('/mailing/down/{id}', [SubscriptionController::class, 'delete'])->name('mailing.down');
 
 Route::middleware('auth')->group(function () {
     Route::delete('logout', [AuthController::class, 'destroy'])

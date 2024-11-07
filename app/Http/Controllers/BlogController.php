@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Post;
+use App\Models\Subscription;
 use App\Models\WebDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,5 +29,23 @@ class BlogController extends BasicController
             'categories' => $categories,
             'details' => $details
         ];
+    }
+
+    public function notifyToday(Request $request)
+    {
+        $posts = Post::where('post_date', today())->get();
+        if ($posts->isEmpty()) {
+            return; // No posts today
+        }
+        $subs = Subscription::where('status', true)->get();
+        foreach ($posts as $post) {
+            foreach ($subs as $sub) {
+                MailingController::simpleNotify('mailing.newpost', $sub->description, [
+                    'title' => 'Nueva noticia',
+                    'post' => $post->toArray(),
+                    'sub' => $sub->toArray()
+                ]);
+            }
+        }
     }
 }
