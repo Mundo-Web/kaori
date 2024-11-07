@@ -6,6 +6,7 @@ import Base from './Components/Tailwind/Base';
 import BlogHeader from './Components/Blog/BlogHeader';
 import Filter from './Components/Blog/Filter';
 import Results from './Components/Blog/Results';
+import ArrayDetails2Object from './Utils/ArrayDetails2Object';
 
 function Blog({ categories, details: detailsDB  = []}) {
   const details = ArrayDetails2Object(detailsDB)
@@ -17,7 +18,7 @@ function Blog({ categories, details: detailsDB  = []}) {
 
   return <>
     <BlogHeader />
-    <Filter categories={categories} filter={filter} setFilter={setFilter} />
+    <Filter categories={categories} filter={filter} setFilter={setFilter} details={details} />
     <Results filter={filter} />
   </>
 }

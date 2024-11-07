@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,8 +22,10 @@ class BlogController extends BasicController
             ->where('categories.visible', true)
             ->where('categories.status', true)
             ->get();
+        $details = WebDetail::where('page', 'blog')->get();
         return [
-            'categories' => $categories
+            'categories' => $categories,
+            'details' => $details
         ];
     }
 }

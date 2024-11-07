@@ -6,7 +6,7 @@ const Filter = ({ filter, setFilter, details }) => {
     <div class="flex flex-col justify-center w-full">
       <div
         $name="Todos nuestros Cursos & Talleres"
-        class="text-2xl md:text-4xl not-italic font-medium text-[color:var(--Cerise-600,#EC008C)] max-md:text-4xl max-md:leading-[52px] font-bold"
+        class="text-2xl md:text-4xl not-italic text-slate-700 max-md:text-4xl max-md:leading-[52px] font-bold"
       >
         {em(details['courses.title'])}
       </div>

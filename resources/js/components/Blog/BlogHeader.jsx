@@ -36,7 +36,7 @@ const BlogHeader = ({ categories }) => {
   }
 
   return <section className="grid md:grid-cols-2 items-center justify-between mt-16 bg-[#F5F7FA]">
-    <img src={bgHeader} alt="" className="w-full h-full aspect-video md:aspect-[16/12] lg:aspect-video object-cover object-center" />
+    <img src='/assets/resources/' alt="" className="w-full h-full aspect-video md:aspect-[16/12] lg:aspect-video object-cover object-center" />
     <form className="p-[5%] w-full" onSubmit={onEmailSubmit}>
       <div className="w-full text-2xl lg:text-4xl font-medium text-pink-600">
         <span className="text-slate-700">Mantente siempre</span>{" "}
