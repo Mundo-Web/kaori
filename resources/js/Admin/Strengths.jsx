@@ -11,10 +11,11 @@ import SwitchFormGroup from '@Adminto/form/SwitchFormGroup';
 import Swal from 'sweetalert2';
 import InputFormGroup from '../Components/form/InputFormGroup';
 import StrengthsRest from '../Actions/Admin/StrengthsRest';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const strengthsRest = new StrengthsRest()
 
-const Strengths = () => {
+const Strengths = ({details}) => {
 
   const gridRef = useRef()
   const modalRef = useRef()
@@ -75,7 +76,7 @@ const Strengths = () => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Fortalezas' rest={strengthsRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='values' details={details}/>} rest={strengthsRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',
@@ -157,7 +158,7 @@ const Strengths = () => {
 
 CreateReactScript((el, properties) => {
 
-  createRoot(el).render(<BaseAdminto {...properties} title='Fortalezas'>
+  createRoot(el).render(<BaseAdminto {...properties} title='Valores'>
     <Strengths {...properties} />
   </BaseAdminto>);
 })

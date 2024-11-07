@@ -10,8 +10,11 @@ import Courses from './Components/Home/Courses';
 import MoreCourses from './Components/Home/MoreCourses';
 import Testimonies from './Components/Home/Testimonies';
 import Articles from './Components/Home/Articles';
+import AboutTrasciende from './Components/Home/AboutTrasciende';
+import ArrayDetails2Object from './Utils/ArrayDetails2Object';
 
-const Home = ({ sliders, indicators, weare, courses, testimonies, articles }) => {
+const Home = ({ sliders, indicators, aboutKaori, courses, testimonies, articles, details: detailsDB }) => {
+  const details = ArrayDetails2Object(detailsDB)
   return (
     <>
       <Sliders sliders={sliders} />
@@ -19,22 +22,30 @@ const Home = ({ sliders, indicators, weare, courses, testimonies, articles }) =>
         indicators.length > 0 &&
         <Indicators indicators={indicators} />
       }
-      <Weare weare={weare} />
       {
+        aboutKaori &&
+        <Weare info={aboutKaori} />
+      }
+      <AboutTrasciende details={details} />
+      {/* {
         courses.length > 0 &&
         <Courses courses={courses.slice(0, 3)} />
       }
       {
         courses.slice(3, 7).length > 0 &&
         <MoreCourses courses={courses.slice(3, 7)} />
+      } */}
+      {
+        courses.length > 0 &&
+        <MoreCourses courses={courses} details={details} />
       }
       {
         testimonies.length > 0 &&
-        <Testimonies testimonies={testimonies} />
+        <Testimonies testimonies={testimonies} details={details} />
       }
       {
         articles.length > 0 &&
-        <Articles articles={articles} />
+        <Articles articles={articles} details={details} />
       }
     </>
   );

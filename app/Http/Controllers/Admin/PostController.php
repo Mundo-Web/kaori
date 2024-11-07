@@ -6,6 +6,7 @@ use App\Http\Controllers\BasicController;
 use App\Models\Post;
 use App\Models\PostTag;
 use App\Models\Tag;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Ramsey\Uuid\Uuid;
@@ -16,6 +17,14 @@ class PostController extends BasicController
     public $reactView = 'Admin/Posts';
 
     public $imageFields = ['image'];
+
+    public function setReactViewProperties(Request $request)
+    {
+        $details = WebDetail::where('page', 'blog')->get();
+        return [
+            'details' => $details
+        ];
+    }
 
     public function setPaginationInstance(string $model)
     {

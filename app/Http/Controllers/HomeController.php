@@ -8,6 +8,8 @@ use App\Models\Item;
 use App\Models\Post;
 use App\Models\Slider;
 use App\Models\Testimony;
+use App\Models\WebDetail;
+use App\Policies\WebDetailPolicy;
 use Illuminate\Http\Request;
 
 class HomeController extends BasicController
@@ -19,18 +21,21 @@ class HomeController extends BasicController
     {
         $sliders = Slider::where('status', true)->where('visible', true)->get();
         $indicators = Indicator::where('status', true)->where('visible', true)->get();
-        $weareJpa = Aboutus::where('name', 'Somos')->first();
+        $aboutKaoriJpa = Aboutus::where('correlative', 'about-kaori')->where('visible', true)->first();
         $testimonies = Testimony::where('status', true)->where('visible', true)->get();
         $articles = Post::with(['category'])->where('status', true)->orderBy('post_date', 'desc')->take(6)->get();
         $courses = Item::where('featured', true)->where('status', true)->take(7)->get();
 
+        $details = WebDetail::whereIn('page', ['courses', 'testimonies', 'blog', 'about'])->get();
+
         return [
             'sliders' => $sliders,
             'indicators' => $indicators,
-            'weare' => $weareJpa->description,
+            'aboutKaori' => $aboutKaoriJpa?->description,
             'testimonies' => $testimonies,
             'articles' => $articles,
             'courses' => $courses,
+            'details' => $details,
         ];
     }
 }

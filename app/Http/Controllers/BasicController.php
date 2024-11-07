@@ -62,7 +62,7 @@ class BasicController extends Controller
 
   public function reactView(Request $request)
   {
-    $summaryJpa = Aboutus::where('name', 'Resúmen')->first();
+    $summaryJpa = Aboutus::where('correlative', 'summary-footer')->first();
     $socials = Social::where('visible', true)->where('status', true)->get();
     $generals = General::select(['correlative', 'description'])
       ->whereIn('correlative', ['terms_conditions', 'privacy_policy', 'support_phone', 'support_email', 'address', 'opening_hours'])
@@ -72,7 +72,7 @@ class BasicController extends Controller
 
     $properties = [
       'session' => Auth::user(),
-      'summary' => $summaryJpa->description,
+      'summary' => $summaryJpa?->description,
       'socials' => $socials,
       'generals' => $generals,
       'global' => [

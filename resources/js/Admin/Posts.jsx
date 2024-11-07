@@ -17,10 +17,11 @@ import QuillFormGroup from '../Components/Adminto/form/QuillFormGroup';
 import SelectAPIFormGroup from '../Components/Adminto/form/SelectAPIFormGroup';
 import html2string from '../Utils/html2string';
 import SetSelectValue from '../Utils/SetSelectValue';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const postsRest = new PostsRest()
 
-const Posts = ({ }) => {
+const Posts = ({ details }) => {
 
   const gridRef = useRef()
   const modalRef = useRef()
@@ -103,7 +104,7 @@ const Posts = ({ }) => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Posts' rest={postsRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='blog' details={details}/>} rest={postsRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',

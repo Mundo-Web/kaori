@@ -6,6 +6,7 @@ use App\Models\Aboutus;
 use App\Models\General;
 use App\Models\Strength;
 use App\Models\Testimony;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 
 class AboutController extends BasicController
@@ -18,12 +19,13 @@ class AboutController extends BasicController
         $testimonies = Testimony::where('status', true)->where('visible', true)->get();
         $aboutus = Aboutus::all();
         $strengths = Strength::where('status', true)->where('visible', true)->get();
-
+        $details = WebDetail::whereIn('page', ['about', 'testimonies', 'values'])->get();
 
         return [
             'testimonies' => $testimonies,
             'aboutus' => $aboutus,
-            'strengths' => $strengths
+            'strengths' => $strengths,
+            'details' => $details,
         ];
     }
 }

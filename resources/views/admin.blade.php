@@ -29,6 +29,10 @@
   <link href="/lte/assets/libs/dxdatagrid/css/dx.dark.compact.css?v=06d3ebc8-645c-4d80-a600-c9652743c425"
     rel="stylesheet" type="text/css" id="dg-dark-stylesheet" disabled="disabled" />
 
+  @if ($route == 'Admin/Gallery.jsx')
+    <link href="/lte/assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+  @endif
+
   {{-- Bootstrap Styles --}}
   <link href="/lte/assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css"
     id="bs-default-stylesheet" />
@@ -72,6 +76,10 @@
 
   @if ($route == 'home')
     <script src="/lte/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+  @elseif ($route == 'Admin/Gallery.jsx')
+    <script src="/lte/assets/libs/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/lte/assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/lte/assets/js/pages/gallery.init.js"></script>
   @endif
   <script src="/lte/assets/libs/quill/quill.min.js"></script>
   <script src="/lte/assets/libs/mohithg-switchery/switchery.min.js"></script>

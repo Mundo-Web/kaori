@@ -20,7 +20,7 @@ const Footer = ({ socials, summary, generals }) => {
   const policyItems = [
     {
       title: 'Términos y condiciones',
-      modalContent: generals.find(x => x.correlative == 'terms_conditions')?.description ,
+      modalContent: generals.find(x => x.correlative == 'terms_conditions')?.description,
     },
     {
       title: 'Políticas de privacidad',
@@ -56,7 +56,7 @@ const Footer = ({ socials, summary, generals }) => {
 
   return (
     <>
-      <img src={bgFooter} alt="" className="aspect-[2/1] md:aspect-[3/1] lg:aspect-[4/1] object-cover object-center w-full" />
+      <img src="/assets/resources/subscription.png" alt="" className="aspect-[2/1] md:aspect-[3/1] lg:aspect-[4/1] object-cover object-center w-full" onError={e => e.target.src = '/assets/resources/cover-404.svg'} />
       <footer className=" p-[5%] pt-[calc(5%+64px)] bg-[#747D84] text-white relative">
         <form className="absolute left-1/4 right-[5%] bottom-[calc(100%-64px)] p-[5%] bg-amber-400 text-[color:var(--Woodsmoke-900,#2B384F)]"
           onSubmit={onEmailSubmit}>
@@ -136,7 +136,7 @@ const Footer = ({ socials, summary, generals }) => {
             Cerrar
           </button>
           <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
-          <HtmlContent className='prose' html={item.modalContent}/>
+          <HtmlContent className='prose' html={item.modalContent} />
         </ReactModal>
       ))}
     </>

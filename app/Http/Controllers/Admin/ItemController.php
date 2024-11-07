@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BasicController;
 use App\Models\Category;
 use App\Models\Item;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 use SoDe\Extend\File;
 use SoDe\Extend\JSON;
@@ -20,9 +21,11 @@ class ItemController extends BasicController
     {
         $icons = JSON::parse(File::get('../storage/app/utils/icons.json'));
         $categories = Category::all();
+        $details = WebDetail::where('page', 'courses')->get();
         return [
             'icons' => $icons,
             'categories' => $categories,
+            'details' => $details,
         ];
     }
 

@@ -11,10 +11,11 @@ import InputFormGroup from '../Components/form/InputFormGroup';
 import CreateReactScript from '../Utils/CreateReactScript';
 import ReactAppend from '../Utils/ReactAppend';
 import Swal from 'sweetalert2';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const aboutusRest = new AboutusRest()
 
-const About = () => {
+const About = ({details}) => {
 
   const gridRef = useRef()
   const modalRef = useRef()
@@ -81,7 +82,7 @@ const About = () => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Nosotros' rest={aboutusRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='about' details={details}/>} rest={aboutusRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',

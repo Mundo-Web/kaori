@@ -14,10 +14,11 @@ import SelectFormGroup from '../Components/form/SelectFormGroup';
 import TestimoniesRest from '../Actions/Admin/TestimoniesRest';
 import DxBox from '../Components/Adminto/Dx/DxBox';
 import Swal from 'sweetalert2';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const testimoniesRest = new TestimoniesRest()
 
-const Testimonies = ({ countries }) => {
+const Testimonies = ({ countries, details }) => {
 
   const gridRef = useRef()
   const modalRef = useRef()
@@ -95,7 +96,7 @@ const Testimonies = ({ countries }) => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Testimonios' rest={testimoniesRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='testimonies' details={details}/>} rest={testimoniesRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',

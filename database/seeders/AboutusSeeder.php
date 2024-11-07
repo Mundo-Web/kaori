@@ -15,35 +15,30 @@ class AboutusSeeder extends Seeder
     {
         $aboutuses = [
             [
-                'name' => 'Somos',
-                'description' => 'Somos Trasciende,... Sed commodo turpis et lorem fermentum, pulvinar laoreet arcu condimentum. *Nam pharetra, magna a sollicitudin dictum*, urna felis euismod nulla, sit amet rhoncus sapien enim in lectus. Fusce tristique a nunc vel dapibus. In hac habitasse platea dictumst.',
+                'correlative' => 'about-kaori',
+                'name' => 'Sobre la fundadora',
+                'description' => '✨ Ayudo a mis alumnos a aumentar su *confianza* y *seguridad personal*, hablar en público con soltura y autenticidad, y desarrollar habilidades sociales efectivas.',
             ],
             [
-                'name' => 'Resúmen',
-                'description' => 'En Transciende, te guiamos en el camino hacia el crecimiento personal y profesional. Nuestro enfoque en el desarrollo integral te permitirá alcanzar tus metas, superar tus límites y transformar tu vida en la mejor versión de ti mismo.',
+                'correlative' => 'about-trasciende-title',
+                'name' => 'Título "sobre trasciende"',
+                'description' => 'El Viaje de Trasciende: *Transformando Vidas* y *Desarrollando Potencial*',
             ],
             [
-                'name' => 'Historia',
-                'description' => 'Trasciende nació hace diez años con la misión de ayudar a las personas a descubrir su máximo potencial. Un pequeño grupo de profesionales creó programas de coaching enfocados en el desarrollo personal y profesional, integrando habilidades técnicas y autoconocimiento para transformar vidas.\nHoy, Trasciende es un referente en crecimiento integral, habiendo impactado a miles de personas a través de sus cursos y talleres. Su enfoque sigue siendo ayudar a cada individuo a alcanzar su mejor versión, expandiéndose a plataformas digitales para llegar a un público global.',
+                'correlative' => 'about-trasciende-description',
+                'name' => 'Descripción "sobre trasciende"',
+                'description' => 'Trasciende nació hace diez años con la misión de ayudar a las personas a descubrir su máximo potencial. Un pequeño grupo de profesionales creó programas de coaching enfocados en el desarrollo personal y profesional, integrando habilidades técnicas y autoconocimiento para transformar vidas.
+                Hoy, Trasciende es un referente en crecimiento integral, habiendo impactado a miles de personas a través de sus cursos y talleres. Su enfoque sigue siendo ayudar a cada individuo a alcanzar su mejor versión, expandiéndose a plataformas digitales para llegar a un público global.',
             ],
             [
-                'name' => 'Fortaleza',
-                'description' => 'En Trasciende, estamos comprometidos en inspirar hábitos saludables tanto física como mentalmente, empoderando a las personas para que adopten prácticas que mejoren su bienestar. Creemos que pequeños cambios consistentes pueden llevar a grandes transformaciones, y nos enfocamos en brindar las herramientas necesarias para fomentar el crecimiento y la resiliencia en cada etapa de la vida.'
+                'correlative' => 'summary-footer',
+                'name' => 'Resúmen footer',
+                'description' => '✨ Ayudamos a nuestros alumnos a aumentar su confianza y seguridad personal, hablar en público con soltura y autenticidad, y desarrollar habilidades sociales efectivas.',
             ],
-            [
-                'name' => 'Misión',
-                'description' => 'Duis aute irure dolor in reprehenderit'
-            ],
-            [
-                'name' => 'Visión',
-                'description' => 'Duis aute irure dolor in reprehenderit'
-            ]
         ];
-
+        Aboutus::whereNotNull('id')->delete();
         foreach ($aboutuses as $aboutus) {
-            Aboutus::updateOrCreate(['name' => $aboutus['name']], [
-                'description' => $aboutus['description']
-            ]);
+            Aboutus::updateOrCreate(['name' => $aboutus['name']], $aboutus);
         }
     }
 }

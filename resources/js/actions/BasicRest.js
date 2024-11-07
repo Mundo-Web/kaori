@@ -23,7 +23,7 @@ class BasicRest {
     return await res.json()
   }
 
-  save = async (request) => {
+  save = async (request, callback = () => {}) => {
     try {
       let status = false
       let result = {}
@@ -54,6 +54,7 @@ class BasicRest {
         body: result.message,
         type: 'success'
       })
+      callback?.()
       return result
     } catch (error) {
       Notify.add({

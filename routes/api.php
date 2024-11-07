@@ -16,9 +16,10 @@ use App\Http\Controllers\Admin\StrengthController as AdminStrengthController;
 use App\Http\Controllers\Admin\GeneralController as AdminGeneralController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Admin\AccountController as AdminAccountController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\ItemController as AdminItemController;
 use App\Http\Controllers\Admin\TagController as AdminTagController;
-
+use App\Http\Controllers\Admin\WebDetailController as AdminWebDetailController;
 // Public
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CoverController;
@@ -65,6 +66,9 @@ Route::middleware('auth')->group(function () {
         Route::patch('/posts/status', [AdminPostController::class, 'status']);
         Route::patch('/posts/{field}', [AdminPostController::class, 'boolean']);
         Route::delete('/posts/{id}', [AdminPostController::class, 'delete']);
+
+        Route::post('/web-details', [AdminWebDetailController::class, 'save']);
+        Route::post('/gallery', [AdminGalleryController::class, 'save']);
 
         Route::post('/courses', [AdminItemController::class, 'save']);
         Route::post('/courses/paginate', [AdminItemController::class, 'paginate']);

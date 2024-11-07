@@ -15,10 +15,11 @@ import Swal from 'sweetalert2';
 import CoursesRest from '../Actions/Admin/CoursesRest';
 import QuillFormGroup from '../Components/Adminto/form/QuillFormGroup';
 import { renderToString } from 'react-dom/server';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const coursesRest = new CoursesRest()
 
-const Courses = ({ icons, categories }) => {
+const Courses = ({ icons, categories, details }) => {
   const gridRef = useRef()
   const modalRef = useRef()
 
@@ -169,7 +170,7 @@ const Courses = ({ icons, categories }) => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Cursos' rest={coursesRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='courses' details={details}/>} rest={coursesRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',
@@ -296,7 +297,7 @@ const Courses = ({ icons, categories }) => {
       <div className="row" id='courses-container'>
         <InputFormGroup eRef={certificateRef} label='Tipo certificado' col='col-md-6' placeholder='Físico y Virtual PDF' required />
         <InputFormGroup eRef={studentsRef} label='Estudiantes' type='number' col='col-md-2' required />
-        <InputFormGroup eRef={longDurationRef} label='Duración total (días)' placeholder='30' col='col-md-4'  />
+        <InputFormGroup eRef={longDurationRef} label='Duración total (días)' placeholder='30' col='col-md-4' />
         <QuillFormGroup eRef={descriptionRef} label='Descripción' />
 
 

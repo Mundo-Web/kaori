@@ -12,7 +12,7 @@ const Menu = ({ session, hasRole }) => {
     <div className="h-100" data-simplebar>
       <div className="user-box text-center">
         <img src={`/api/admin/profile/thumbnail/${session.relative_id}?v=${new Date(session.updated_at).getTime()}`} alt={session.name} title={session.name}
-          className="rounded-circle img-thumbnail avatar-md" style={{ backgroundColor: 'unset', borderColor: '#98a6ad', objectFit: 'cover', objectPosition: 'center' }} onError={e => e.target.src = `https://ui-avatars.com/api/?name=${session.name}+${session.lastname}&color=7F9CF5&background=EBF4FF`}/>
+          className="rounded-circle img-thumbnail avatar-md" style={{ backgroundColor: 'unset', borderColor: '#98a6ad', objectFit: 'cover', objectPosition: 'center' }} onError={e => e.target.src = `https://ui-avatars.com/api/?name=${session.name}+${session.lastname}&color=7F9CF5&background=EBF4FF`} />
         <div className="dropdown">
           <a href="#" className="user-name dropdown-toggle h5 mt-2 mb-1 d-block" data-bs-toggle="dropdown"
             aria-expanded="false">{session.name.split(' ')[0]} {session.lastname.split(' ')[0]}</a>
@@ -81,11 +81,13 @@ const Menu = ({ session, hasRole }) => {
               <MenuItem href="/admin/about" icon='mdi mdi-briefcase'>Nosotros</MenuItem>
               <MenuItem href="/admin/indicators" icon='mdi mdi-dots-grid'>Indicadores</MenuItem>
               <MenuItem href="/admin/sliders" icon='mdi mdi-page-layout-body'>Sliders</MenuItem>
-              <MenuItem href="/admin/strengths" icon='mdi mdi-arm-flex'>Fortalezas</MenuItem>
+              <MenuItem href="/admin/strengths" icon='mdi mdi-arm-flex'>Valores</MenuItem>
               <MenuItem href="/admin/testimonies" icon='mdi mdi-forum'>Testimonios</MenuItem>
               <MenuItem href="/admin/categories" icon='mdi mdi-layers-outline'>Categorías</MenuItem>
               <MenuItem href="/admin/tags" icon='mdi mdi-tag'>Etiquetas</MenuItem>
               <MenuItem href="/admin/socials" icon='mdi mdi-web'>Redes Sociales</MenuItem>
+              <li className='menu-title'>Recursos</li>
+              <MenuItem href="/admin/gallery" icon='mdi mdi-image-multiple'>Galeria</MenuItem>
               <li className="menu-title">Configuraciones</li>
               <MenuItem href="/admin/generals" icon='mdi mdi-credit-card-settings'>Datos Generales</MenuItem>
               <MenuItem href="/admin/profile" icon='mdi mdi-account-box'>Mi perfil</MenuItem>
