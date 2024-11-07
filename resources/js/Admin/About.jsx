@@ -12,10 +12,13 @@ import CreateReactScript from '../Utils/CreateReactScript';
 import ReactAppend from '../Utils/ReactAppend';
 import Swal from 'sweetalert2';
 import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
+import ArrayDetails2Object from '../Utils/ArrayDetails2Object';
+import WebDetailsRest from '../Actions/Admin/WebDetailsRest';
 
 const aboutusRest = new AboutusRest()
+const webDetailsRest = new WebDetailsRest()
 
-const About = ({details}) => {
+const About = ({details: detailsDB}) => {
 
   const gridRef = useRef()
   const modalRef = useRef()
@@ -81,8 +84,30 @@ const About = ({details}) => {
     $(gridRef.current).dxDataGrid('instance').refresh()
   }
 
+  const [details, setDetails] = useState(ArrayDetails2Object(detailsDB))
+  const [videoEditing, setVideoEditing] = useState(false)
+
+  const onVideoChange = async (e) => {
+    const result = webDetailsRest.save({
+      page: 'about',
+      name: 'video',
+      description: e.target.value
+    })
+    if (!result) return
+    setDetails(old => ({ ...old, [`about.video`]: e.target.value }))
+    setVideoEditing(false)
+  }
+
   return (<>
-    <Table gridRef={gridRef} title={<BasicEditing correlative='about' details={details}/>} rest={aboutusRest}
+    <Table gridRef={gridRef} title={<>
+      <BasicEditing correlative='about' details={detailsDB}/>
+      {
+        videoEditing
+          ? <input className='form-control form-control-sm mb-1' defaultValue={details?.[`about.video`]} onBlur={onVideoChange} autoFocus />
+          : <smal className='header-title mt-1' onClick={() => setVideoEditing(true)}>{details?.[`about.video`] || 'Sin video'}</smal>
+      }
+      </>
+    } rest={aboutusRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',
