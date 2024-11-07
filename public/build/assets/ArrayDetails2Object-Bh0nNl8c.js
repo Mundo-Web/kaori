@@ -1,1 +1,0 @@
-import{j as o}from"./AboutHeader-DEdD30eg.js";import{H as s}from"./HtmlContent-Ca-OCC2e.js";const c=(t="")=>o.jsx(s,{html:String(t).replace(/\*(.*?)\*/g,'<span style="color: #ec4899">$1</span>')}),p=(t=[])=>{const e={};return t.forEach(r=>{e[r.page+"."+r.name]=r.description}),e};export{p as A,c as e};

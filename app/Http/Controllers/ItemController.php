@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Item;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,8 +27,10 @@ class ItemController extends BasicController
             ->where('items.status', true)
             ->where('items.visible', true)
             ->get();
+        $details = WebDetail::where('page', 'courses')->get();
         return [
-            'categories' => $categories
+            'categories' => $categories,
+            'details' => $details
         ];
     }
 

@@ -7,8 +7,8 @@ import BlogHeader from './Components/Blog/BlogHeader';
 import Filter from './Components/Blog/Filter';
 import Results from './Components/Blog/Results';
 
-function Blog({categories}) {
-
+function Blog({ categories, details: detailsDB  = []}) {
+  const details = ArrayDetails2Object(detailsDB)
   const [filter, setFilter] = useState({
     category: null,
     search: null,

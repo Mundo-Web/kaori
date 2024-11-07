@@ -1,23 +1,20 @@
 import React from "react"
+import em from "../../Utils/em"
 
-const Filter = ({ filter, setFilter }) => {
+const Filter = ({ filter, setFilter, details }) => {
   return <section className="p-[5%] mt-16">
     <div class="flex flex-col justify-center w-full">
       <div
         $name="Todos nuestros Cursos & Talleres"
-        class="text-2xl md:text-4xl not-italic font-medium text-[color:var(--Cerise-600,#EC008C)] max-md:text-4xl max-md:leading-[52px]"
+        class="text-2xl md:text-4xl not-italic font-medium text-[color:var(--Cerise-600,#EC008C)] max-md:text-4xl max-md:leading-[52px] font-bold"
       >
-        <span class=" text-slate-700">Todos nuestros </span>
-        <span class="font-bold text-pink-600">Cursos</span>{" "}
-        <span class=" text-slate-700">& </span>
-        <span class="font-bold text-pink-600">Talleres</span>
+        {em(details['courses.title'])}
       </div>
       <div
         $name="Fusce a magna nec diam blandit hendrerit. In lobortis, est eget ultrices pharetra, est tortor pellentesque odio, ut auctor tortor ipsum ac orci."
         class="mt-6 text-base not-italic leading-6 text-[color:var(--Woodsmoke-900,#2B384F)]"
       >
-        Fusce a magna nec diam blandit hendrerit. In lobortis, est eget ultrices
-        pharetra, est tortor pellentesque odio, ut auctor tortor ipsum ac orci.
+        {em(details['courses.description'])}
       </div>
     </div>
     <div class="flex flex-wrap gap-10 justify-between items-center mt-[5%] w-full text-base font-medium">

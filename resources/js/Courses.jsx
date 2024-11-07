@@ -5,13 +5,13 @@ import Base from './Components/Tailwind/Base';
 import Filter from './Components/Courses/Filter';
 import Results from './Components/Courses/Results';
 
-const Courses = ({ categories }) => {
-
+const Courses = ({ categories, details: detailsDB }) => {
+  const details = ArrayDetails2Object(detailsDB)
   const [filter, setFilter] = useState({});
 
   return (
     <>
-      <Filter filter={filter} setFilter={setFilter} />
+      <Filter filter={filter} setFilter={setFilter} details={details}/>
       <Results categories={categories} filter={filter} setFilter={setFilter}/>
     </>
   );
