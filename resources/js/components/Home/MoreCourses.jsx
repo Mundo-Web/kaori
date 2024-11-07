@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,7 +23,7 @@ const MoreCourses = ({ courses, details }) => {
       }
 
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -34,6 +34,10 @@ const MoreCourses = ({ courses, details }) => {
         //   prevEl: ".swiper-button-prev",
         // }}
         loop={true}
+        autoplay={{
+          delay: 3000, // Cambia el tiempo de retraso (en milisegundos)
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           640: {
             slidesPerView: 2,

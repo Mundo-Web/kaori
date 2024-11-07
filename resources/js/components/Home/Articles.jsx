@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -14,15 +14,15 @@ const Articles = ({ articles, details }) => {
 
   return (
     <section className="flex overflow-hidden flex-col justify-center p-[5%] bg-slate-100">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight text-slate-700">
-            {em(details?.['blog.title'])}
-          </h2>
-          {
-            details?.['blog.description'] &&
-            <div className="mt-2 text-sm leading-5 text-gray-700">
-              {em(details?.['blog.description'])}
-            </div>
-          }
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight text-slate-700">
+        {em(details?.['blog.title'])}
+      </h2>
+      {
+        details?.['blog.description'] &&
+        <div className="mt-2 text-sm leading-5 text-gray-700">
+          {em(details?.['blog.description'])}
+        </div>
+      }
       <div className="flex flex-col justify-center w-full max-md:max-w-full">
         <div className="flex flex-wrap gap-6 justify-between items-center w-full max-md:max-w-full">
           <div className="flex gap-3 justify-center items-center self-stretch my-auto">
@@ -45,7 +45,7 @@ const Articles = ({ articles, details }) => {
       </div>
 
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper
         }}
@@ -59,6 +59,10 @@ const Articles = ({ articles, details }) => {
           prevEl: ".swiper-button-prev",
         }}
         loop={true}
+        autoplay={{
+          delay: 3000, // Cambia el tiempo de retraso (en milisegundos)
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
