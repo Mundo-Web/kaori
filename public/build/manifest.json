@@ -189,14 +189,17 @@
       "_index-RYns6xqu.js"
     ]
   },
-  "_Weare-D28n6O2L.js": {
-    "file": "assets/Weare-D28n6O2L.js",
+  "_Weare-DRwFWhhG.js": {
+    "file": "assets/Weare-DRwFWhhG.js",
     "name": "Weare",
     "imports": [
       "resources/js/Components/About/AboutHeader.jsx",
       "_index-RYns6xqu.js",
-      "_ArrayDetails2Object-Bh0nNl8c.js",
-      "resources/js/Components/About/Strengths.jsx"
+      "resources/js/Components/About/Strengths.jsx",
+      "_ArrayDetails2Object-Bh0nNl8c.js"
+    ],
+    "css": [
+      "swiper.css"
     ],
     "assets": [
       "testimonieImage.png"
@@ -287,7 +290,7 @@
     "isEntry": true
   },
   "resources/js/About.jsx": {
-    "file": "assets/About-DHmNieba.js",
+    "file": "assets/About-hxjv_I0z.js",
     "name": "About",
     "src": "resources/js/About.jsx",
     "isEntry": true,
@@ -299,7 +302,7 @@
       "_Base-DaifXivR.js",
       "_index-DNUR7M9R.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
-      "_Weare-D28n6O2L.js",
+      "_Weare-DRwFWhhG.js",
       "resources/js/Components/About/Strengths.jsx",
       "_index.esm-Bla6j_hB.js",
       "____vite-browser-external_commonjs-proxy-DbMF7jdq.js",
@@ -1057,7 +1060,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/PasswordFormGroup.jsx": {
-    "file": "assets/PasswordFormGroup-CeKzIQaI.js",
+    "file": "assets/PasswordFormGroup-B_CKjPyD.js",
     "name": "PasswordFormGroup",
     "src": "resources/js/Components/Adminto/form/PasswordFormGroup.jsx",
     "isEntry": true,
@@ -1067,7 +1070,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/QuillFormGroup.jsx": {
-    "file": "assets/QuillFormGroup-CeKzIQaI.js",
+    "file": "assets/QuillFormGroup-B_CKjPyD.js",
     "name": "QuillFormGroup",
     "src": "resources/js/Components/Adminto/form/QuillFormGroup.jsx",
     "isEntry": true,
@@ -1077,7 +1080,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/SelectAPIFormGroup.jsx": {
-    "file": "assets/SelectAPIFormGroup-DYKugbDi.js",
+    "file": "assets/SelectAPIFormGroup-D_Fb_wbA.js",
     "name": "SelectAPIFormGroup",
     "src": "resources/js/Components/Adminto/form/SelectAPIFormGroup.jsx",
     "isEntry": true,
@@ -1109,7 +1112,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/TextareaFormGroup.jsx": {
-    "file": "assets/TextareaFormGroup-B_CKjPyD.js",
+    "file": "assets/TextareaFormGroup-CeKzIQaI.js",
     "name": "TextareaFormGroup",
     "src": "resources/js/Components/Adminto/form/TextareaFormGroup.jsx",
     "isEntry": true,
@@ -1166,7 +1169,7 @@
     ]
   },
   "resources/js/Components/Blog/Results.jsx": {
-    "file": "assets/Results-2VX7jqO8.js",
+    "file": "assets/Results-eqHE1MS0.js",
     "name": "Results",
     "src": "resources/js/Components/Blog/Results.jsx",
     "isEntry": true,
@@ -1243,7 +1246,7 @@
     ]
   },
   "resources/js/Components/Courses/Results.jsx": {
-    "file": "assets/Results-eqHE1MS0.js",
+    "file": "assets/Results-2VX7jqO8.js",
     "name": "Results",
     "src": "resources/js/Components/Courses/Results.jsx",
     "isEntry": true,
@@ -1346,13 +1349,17 @@
     ]
   },
   "resources/js/Components/Home/Testimonies.jsx": {
-    "file": "assets/Testimonies-B_CKjPyD.js",
+    "file": "assets/Testimonies-D5sgiUk4.js",
     "name": "Testimonies",
     "src": "resources/js/Components/Home/Testimonies.jsx",
     "isEntry": true,
     "imports": [
       "resources/js/Components/About/AboutHeader.jsx",
-      "_index-RYns6xqu.js"
+      "_index-RYns6xqu.js",
+      "resources/js/Components/About/Strengths.jsx"
+    ],
+    "css": [
+      "swiper.css"
     ]
   },
   "resources/js/Components/Home/Weare.jsx": {
@@ -1547,7 +1554,7 @@
     ]
   },
   "resources/js/Components/form/PasswordFormGroup.jsx": {
-    "file": "assets/PasswordFormGroup-B_CKjPyD.js",
+    "file": "assets/PasswordFormGroup-CeKzIQaI.js",
     "name": "PasswordFormGroup",
     "src": "resources/js/Components/form/PasswordFormGroup.jsx",
     "isEntry": true,
@@ -1557,7 +1564,7 @@
     ]
   },
   "resources/js/Components/form/QuillFormGroup.jsx": {
-    "file": "assets/QuillFormGroup-B_CKjPyD.js",
+    "file": "assets/QuillFormGroup-CeKzIQaI.js",
     "name": "QuillFormGroup",
     "src": "resources/js/Components/form/QuillFormGroup.jsx",
     "isEntry": true,
@@ -1567,7 +1574,7 @@
     ]
   },
   "resources/js/Components/form/SelectAPIFormGroup.jsx": {
-    "file": "assets/SelectAPIFormGroup-D_Fb_wbA.js",
+    "file": "assets/SelectAPIFormGroup-DYKugbDi.js",
     "name": "SelectAPIFormGroup",
     "src": "resources/js/Components/form/SelectAPIFormGroup.jsx",
     "isEntry": true,
@@ -1589,7 +1596,7 @@
     ]
   },
   "resources/js/Components/form/TextareaFormGroup.jsx": {
-    "file": "assets/TextareaFormGroup-CeKzIQaI.js",
+    "file": "assets/TextareaFormGroup-B_CKjPyD.js",
     "name": "TextareaFormGroup",
     "src": "resources/js/Components/form/TextareaFormGroup.jsx",
     "isEntry": true,
@@ -1717,7 +1724,7 @@
     ]
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-BY79cd42.js",
+    "file": "assets/Home-DNE3VJvx.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -1727,7 +1734,7 @@
       "resources/js/Utils/ReactAppend.jsx",
       "_Base-DaifXivR.js",
       "_CreateReactScript-BERtc5uF.js",
-      "_Weare-D28n6O2L.js",
+      "_Weare-DRwFWhhG.js",
       "resources/js/Components/About/Strengths.jsx",
       "resources/js/Components/Home/Articles.jsx",
       "_CourseCard-BX3udr4q.js",

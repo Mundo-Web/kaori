@@ -1,6 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import em from '../../Utils/em'
@@ -40,10 +40,14 @@ const Strengths = ({ strength, strengths, details }) => {
       }
       <div className="lg:col-span-3 w-full overflow-hidden">
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={2}
-          loop
+          loop={true}
+          autoplay={{
+            delay: 3000, // Cambia el tiempo de retraso (en milisegundos)
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true }}
           breakpoints={{
             0: {
