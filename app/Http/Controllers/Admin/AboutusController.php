@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\Controller;
 use App\Models\Aboutus;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 
 class AboutusController extends BasicController
@@ -14,6 +15,9 @@ class AboutusController extends BasicController
 
     public function setReactViewProperties(Request $request)
     {
-        return [];
+        $details = WebDetail::where('page', 'about')->get();
+        return [
+            'details' => $details
+        ];
     }
 }
