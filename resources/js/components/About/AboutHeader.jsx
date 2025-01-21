@@ -40,7 +40,7 @@ const AboutHeader = ({ summary, details }) => {
           <img
             src={`https://i.ytimg.com/vi/${details['about.video']}/hq720.jpg`}
             className="aspect-[16/9] md:aspect-[64/25] w-full border-0 object-cover object-center absolute top-0 left-0"
-            alt={details?.["about.title"]}
+            alt={details?.["about.title"] || ''}
           />
           <div className="absolute top-0 left-0 right-0 bottom-0 p-[10%] flex items-center justify-center">
             <div className="text-center max-w-xl">
@@ -48,7 +48,7 @@ const AboutHeader = ({ summary, details }) => {
                 {em(details?.["about.title"])}
               </h1>
               <div className="md:text-lg text-white text-shadow mb-2 md:mb-4">
-                {em(details?.["about.description"])}
+                {em(details?.["about.description"] || '')}
               </div>
               <button
                 onClick={onPlay}
