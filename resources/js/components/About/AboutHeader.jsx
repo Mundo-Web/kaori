@@ -27,7 +27,7 @@ const AboutHeader = ({ summary, details }) => {
   return (
     <section className="relative mt-16">
       <YouTube
-        videoId="OeYZwD13oHk"
+        videoId={details['about.video']}
         className="aspect-[16/9] md:aspect-[64/25] w-full border-0"
         onPause={e => setPlaying(false)}
         opts={opts}
@@ -38,7 +38,7 @@ const AboutHeader = ({ summary, details }) => {
       {!playing && (
         <>
           <img
-            src="https://i.ytimg.com/vi/OeYZwD13oHk/hq720.jpg"
+            src={`https://i.ytimg.com/vi/${details['about.video']}/hq720.jpg`}
             className="aspect-[16/9] md:aspect-[64/25] w-full border-0 object-cover object-center absolute top-0 left-0"
             alt={details?.["about.title"]}
           />
