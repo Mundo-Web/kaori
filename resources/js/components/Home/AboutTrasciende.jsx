@@ -10,7 +10,7 @@ const AboutTrasciende = ({details}) => {
     <div
       class="mt-2 text-center text-sm md:text-base not-italic text-[color:var(--Woodsmoke-900,#2B384F)]"
     >
-      {em(details['about.description'])}
+      {em(details['about.description'] || '')}
     </div>
     <iframe className="aspect-[1500/587] w-full mt-[5%] md:mt-[2.5%] rounded-lg" src={`https://www.youtube.com/embed/${details['about.video']}`} title="NUEVAS INSTALACIONES ESCUELA TRASCIENDE @TrasciendeEscuela" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
