@@ -45,7 +45,7 @@ const AboutHeader = ({ summary, details }) => {
           <div className="absolute top-0 left-0 right-0 bottom-0 p-[10%] flex items-center justify-center">
             <div className="text-center max-w-xl">
               <h1 className="text-[24px] md:text-[48px] md:[line-height:60px] text-2xl text-white font-bold text-shadow mb-2 md:mb-4">
-                {em(details?.["about.title"])}
+                {em(details?.["about.title"] || '')}
               </h1>
               <div className="md:text-lg text-white text-shadow mb-2 md:mb-4">
                 {em(details?.["about.description"] || '')}
