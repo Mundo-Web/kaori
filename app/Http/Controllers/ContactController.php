@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\General;
+use App\Models\WebDetail;
 use Illuminate\Http\Request;
 
 class ContactController extends BasicController
@@ -13,8 +14,10 @@ class ContactController extends BasicController
     public function setReactViewProperties(Request $request)
     {
         $generals = General::all();
+        $details = WebDetail::whereIn('page', ['messages'])->get();
         return [
-            'generals' => $generals
+            'generals' => $generals,
+            'details' => $details
         ];
     }
 }

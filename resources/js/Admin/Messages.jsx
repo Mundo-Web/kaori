@@ -8,10 +8,11 @@ import ReactAppend from '@Utils/ReactAppend';
 import MessagesRest from '@Rest/Admin/MessagesRest';
 import Modal from '@Adminto/Modal';
 import Swal from 'sweetalert2';
+import BasicEditing from '../Components/Adminto/Basic/BasicEditing';
 
 const messagesRest = new MessagesRest()
 
-const Messages = () => {
+const Messages = ({details}) => {
   const gridRef = useRef()
   const modalRef = useRef()
 
@@ -46,7 +47,7 @@ const Messages = () => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title='Mensajes' rest={messagesRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='messages' details={details} />} rest={messagesRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',

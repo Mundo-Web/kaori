@@ -76,7 +76,7 @@ const Header = ({ socials, generals }) => {
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-x-8">
             <div>
               <p className="mb-4 text-lg">{generals.find(x => x.correlative == 'support_phone')?.description}</p>
-              <p className="mb-4 text-lg">{generals.find(x => x.correlative == 'support_email')?.description}</p>
+              <p className="mb-4 text-lg text-wrap">{generals.find(x => x.correlative == 'support_email')?.description}</p>
               <p className="mb-4 text-lg">{generals.find(x => x.correlative == 'opening_hours')?.description}</p>
             </div>
             <div>

@@ -60,7 +60,7 @@ const Footer = ({ socials, summary, generals }) => {
       <footer className=" p-[5%] pt-[calc(5%+64px)] bg-[#747D84] text-white relative">
         <form className="absolute left-1/4 right-[5%] bottom-[calc(100%-64px)] p-[5%] bg-amber-400 text-[color:var(--Woodsmoke-900,#2B384F)]"
           onSubmit={onEmailSubmit}>
-          <div className="grid md:grid-cols-2 items-end gap-4">
+          <div className="grid md:grid-cols-2 items-center gap-4">
             <h1 className="text-xl md:text-2xl">
               Mantente siempre <b>Informado</b> con nuestra newsletter
             </h1>
