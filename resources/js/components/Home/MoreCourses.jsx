@@ -80,7 +80,7 @@ const MoreCourses = ({ courses, details }) => {
         href="/courses"
         className="flex gap-2 justify-center items-center self-center md:self-end px-6 py-4 mt-8 md:mt-14 text-base font-medium tracking-normal leading-none text-white uppercase rounded-3xl bg-[#2E405E] hover:bg-[#1E2A3E] transition-colors duration-300"
       >
-        <span>ver todos los cursos y diplomados</span>
+        <span>VER {details?.['courses.title'].replaceAll('*', '')}</span>
         <i className="mdi mdi-arrow-top-right"></i>
       </a>
     </div>

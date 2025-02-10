@@ -1,7 +1,10 @@
 import React from "react"
 import em from "../../Utils/em";
 
-const Weare = ({ info, isAbout = false }) => {
+const Weare = ({ title, info, isAbout = false }) => {
+
+  console.log(title)
+
   const array = [
     <img
       src="/assets/resources/about.png"
@@ -12,10 +15,13 @@ const Weare = ({ info, isAbout = false }) => {
       onError={e => e.target.src = '/assets/resources/cover-404.svg'}
     />,
     <div className="lg:col-span-3 flex flex-col justify-center self-stretch my-auto">
+      <h3 className="text-4xl not-italic font-bold leading-10 text-slate-600 max-md:max-w-full">
+        {em(title)}
+      </h3>
       <div
-        className="text-xl md:text-2xl lg:text-4xl not-italic  text-[#2B384F] max-md:max-w-full"
+        className="text-xl not-italic mt-8 text-[#2B384F] max-md:max-w-full text-justify"
       >
-        {em(info)}
+        {em((info ?? '').replaceAll('\n', '<br>'))}
       </div>
       {
         !isAbout &&

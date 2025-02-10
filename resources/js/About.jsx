@@ -12,6 +12,7 @@ import Weare from './Components/Home/Weare';
 const About = ({ testimonies, summary, aboutus, strengths, details: detailsDB }) => {
   const aboutTrasciendeTitle = aboutus.find(x => x.correlative == 'about-trasciende-title')?.description ?? '';
   const aboutTrasciendeDescription = aboutus.find(x => x.correlative == 'about-trasciende-description')?.description ?? '';
+  const aboutKaoriTitle = aboutus.find(x => x.correlative == 'about-kaori-title')?.description ?? '';
   const aboutKaori = aboutus.find(x => x.correlative == 'about-kaori')?.description ?? '';
   const details = ArrayDetails2Object(detailsDB);
 
@@ -21,7 +22,7 @@ const About = ({ testimonies, summary, aboutus, strengths, details: detailsDB })
       <AboutHeader summary={summary} details={details} />
     }
     <History title={aboutTrasciendeTitle} history={aboutTrasciendeDescription} />
-    <Weare info={aboutKaori} isAbout={true} />
+    <Weare title={aboutKaoriTitle} info={aboutKaori} isAbout={true} />
     <Testimonies testimonies={testimonies} background='gray-100' details={details} />
     <Strengths strengths={strengths} details={details} />
   </>

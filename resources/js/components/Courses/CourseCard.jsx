@@ -7,10 +7,10 @@ const CourseCard = ({id, name, category, created_at, summary, image, price, firs
       {
         showPrice && <p className="my-4 text-xl fotn-bold text-pink-600">S/.{Number2Currency(price)}</p>
       }
-      <h3 className="text-xl md:text-2xl font-semibold tracking-tight line-clamp-2 h-16 text-ellipsis text-[#2B384F]">
+      <h3 className="text-xl md:text-2xl font-semibold tracking-tight line-clamp-2 h-16 text-ellipsis text-[#2B384F] text-justify">
         {name}
       </h3>
-      <p className="mt-3 md:mt-5 text-sm line-clamp-3 text-ellipsis text-[#2E405E] h-[60px]">
+      <p className="mt-3 md:mt-5 text-sm line-clamp-3 text-ellipsis text-[#2E405E] h-[60px] text-justify">
         {summary}
       </p>
       {

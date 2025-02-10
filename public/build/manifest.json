@@ -22,20 +22,6 @@
       "_main-BjVPLcVK.js"
     ]
   },
-  "_Base-BLnXkbYR.js": {
-    "file": "assets/Base-BLnXkbYR.js",
-    "name": "Base",
-    "imports": [
-      "resources/js/Components/About/AboutHeader.jsx",
-      "_index-RYns6xqu.js",
-      "_tippy-react.esm-DYFqe69e.js",
-      "resources/js/Components/Tailwind/Base.jsx",
-      "resources/js/Components/Adminto/Basic/BasicEditing.jsx",
-      "_sweetalert2.all-DJo0UVK6.js",
-      "_CreateReactScript-BERtc5uF.js",
-      "_HtmlContent-Ca-OCC2e.js"
-    ]
-  },
   "_Base-BOeSTE30.js": {
     "file": "assets/Base-BOeSTE30.js",
     "name": "Base",
@@ -51,6 +37,20 @@
       "tippy.css"
     ]
   },
+  "_Base-CakaWnfB.js": {
+    "file": "assets/Base-CakaWnfB.js",
+    "name": "Base",
+    "imports": [
+      "resources/js/Components/About/AboutHeader.jsx",
+      "_index-RYns6xqu.js",
+      "_tippy-react.esm-DYFqe69e.js",
+      "resources/js/Components/Tailwind/Base.jsx",
+      "resources/js/Components/Adminto/Basic/BasicEditing.jsx",
+      "_sweetalert2.all-DJo0UVK6.js",
+      "_CreateReactScript-BERtc5uF.js",
+      "_HtmlContent-Ca-OCC2e.js"
+    ]
+  },
   "_BasicEditing-RKEd4jLE.js": {
     "file": "assets/BasicEditing-RKEd4jLE.js",
     "name": "BasicEditing",
@@ -62,8 +62,8 @@
       "resources/js/Components/Adminto/Basic/BasicEditing.jsx"
     ]
   },
-  "_CourseCard-BX3udr4q.js": {
-    "file": "assets/CourseCard-BX3udr4q.js",
+  "_CourseCard-Dbr2iNpW.js": {
+    "file": "assets/CourseCard-Dbr2iNpW.js",
     "name": "CourseCard",
     "imports": [
       "resources/js/Components/About/AboutHeader.jsx",
@@ -131,8 +131,8 @@
     "file": "assets/Number2Currency-e57Tgsuk.js",
     "name": "Number2Currency"
   },
-  "_PostCard-ez1ObF1s.js": {
-    "file": "assets/PostCard-ez1ObF1s.js",
+  "_PostCard-DYNKYbXz.js": {
+    "file": "assets/PostCard-DYNKYbXz.js",
     "name": "PostCard",
     "imports": [
       "resources/js/Components/About/AboutHeader.jsx",
@@ -189,8 +189,8 @@
       "_index-RYns6xqu.js"
     ]
   },
-  "_Weare-DRwFWhhG.js": {
-    "file": "assets/Weare-DRwFWhhG.js",
+  "_Weare-CRVT5KzF.js": {
+    "file": "assets/Weare-CRVT5KzF.js",
     "name": "Weare",
     "imports": [
       "resources/js/Components/About/AboutHeader.jsx",
@@ -200,9 +200,6 @@
     ],
     "css": [
       "swiper.css"
-    ],
-    "assets": [
-      "testimonieImage.png"
     ]
   },
   "____vite-browser-external_commonjs-proxy-DbMF7jdq.js": {
@@ -290,7 +287,7 @@
     "isEntry": true
   },
   "resources/js/About.jsx": {
-    "file": "assets/About-Bdm3fp4Q.js",
+    "file": "assets/About-WYIpxlHb.js",
     "name": "About",
     "src": "resources/js/About.jsx",
     "isEntry": true,
@@ -299,10 +296,10 @@
       "_index-RYns6xqu.js",
       "_CreateReactScript-BERtc5uF.js",
       "resources/js/Utils/ReactAppend.jsx",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_index-DNUR7M9R.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
-      "_Weare-DRwFWhhG.js",
+      "_Weare-CRVT5KzF.js",
       "resources/js/Components/About/Strengths.jsx",
       "_index.esm-Bla6j_hB.js",
       "____vite-browser-external_commonjs-proxy-DbMF7jdq.js",
@@ -773,7 +770,7 @@
     ]
   },
   "resources/js/Admin/Testimonies.jsx": {
-    "file": "assets/Testimonies-E5i3zAnr.js",
+    "file": "assets/Testimonies-CBau3mjb.js",
     "name": "Testimonies",
     "src": "resources/js/Admin/Testimonies.jsx",
     "isEntry": true,
@@ -808,7 +805,7 @@
     ]
   },
   "resources/js/Blog.jsx": {
-    "file": "assets/Blog-C_W1eORC.js",
+    "file": "assets/Blog-CTx_HBP1.js",
     "name": "Blog",
     "src": "resources/js/Blog.jsx",
     "isEntry": true,
@@ -817,11 +814,11 @@
       "_index-RYns6xqu.js",
       "_CreateReactScript-BERtc5uF.js",
       "resources/js/Utils/ReactAppend.jsx",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_sweetalert2.all-DJo0UVK6.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
       "_ArrayJoin-bqGYcnH1.js",
-      "_PostCard-ez1ObF1s.js",
+      "_PostCard-DYNKYbXz.js",
       "resources/js/Components/Adminto/Basic/BasicEditing.jsx",
       "_index.esm-Bla6j_hB.js",
       "____vite-browser-external_commonjs-proxy-DbMF7jdq.js",
@@ -838,7 +835,7 @@
     ]
   },
   "resources/js/BlogArticle.jsx": {
-    "file": "assets/BlogArticle-3tBOOIo7.js",
+    "file": "assets/BlogArticle-kHrufXqv.js",
     "name": "BlogArticle",
     "src": "resources/js/BlogArticle.jsx",
     "isEntry": true,
@@ -847,7 +844,7 @@
       "_index-RYns6xqu.js",
       "_CreateReactScript-BERtc5uF.js",
       "resources/js/Utils/ReactAppend.jsx",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_HtmlContent-Ca-OCC2e.js",
       "_tippy-react.esm-DYFqe69e.js",
       "_proxy-Nlf73AMv.js",
@@ -1033,7 +1030,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/CheckboxFormGroup.jsx": {
-    "file": "assets/CheckboxFormGroup-B_CKjPyD.js",
+    "file": "assets/CheckboxFormGroup-CeKzIQaI.js",
     "name": "CheckboxFormGroup",
     "src": "resources/js/Components/Adminto/form/CheckboxFormGroup.jsx",
     "isEntry": true,
@@ -1053,7 +1050,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/InputFormGroup.jsx": {
-    "file": "assets/InputFormGroup-B_CKjPyD.js",
+    "file": "assets/InputFormGroup-CeKzIQaI.js",
     "name": "InputFormGroup",
     "src": "resources/js/Components/Adminto/form/InputFormGroup.jsx",
     "isEntry": true,
@@ -1073,7 +1070,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/QuillFormGroup.jsx": {
-    "file": "assets/QuillFormGroup-CeKzIQaI.js",
+    "file": "assets/QuillFormGroup-B_CKjPyD.js",
     "name": "QuillFormGroup",
     "src": "resources/js/Components/Adminto/form/QuillFormGroup.jsx",
     "isEntry": true,
@@ -1095,7 +1092,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/SelectFormGroup.jsx": {
-    "file": "assets/SelectFormGroup-CeKzIQaI.js",
+    "file": "assets/SelectFormGroup-B_CKjPyD.js",
     "name": "SelectFormGroup",
     "src": "resources/js/Components/Adminto/form/SelectFormGroup.jsx",
     "isEntry": true,
@@ -1115,7 +1112,7 @@
     ]
   },
   "resources/js/Components/Adminto/form/TextareaFormGroup.jsx": {
-    "file": "assets/TextareaFormGroup-CeKzIQaI.js",
+    "file": "assets/TextareaFormGroup-B_CKjPyD.js",
     "name": "TextareaFormGroup",
     "src": "resources/js/Components/Adminto/form/TextareaFormGroup.jsx",
     "isEntry": true,
@@ -1152,7 +1149,7 @@
     ]
   },
   "resources/js/Components/Blog/Filter.jsx": {
-    "file": "assets/Filter-B_CKjPyD.js",
+    "file": "assets/Filter-CeKzIQaI.js",
     "name": "Filter",
     "src": "resources/js/Components/Blog/Filter.jsx",
     "isEntry": true,
@@ -1172,7 +1169,7 @@
     ]
   },
   "resources/js/Components/Blog/Results.jsx": {
-    "file": "assets/Results-eqHE1MS0.js",
+    "file": "assets/Results-2VX7jqO8.js",
     "name": "Results",
     "src": "resources/js/Components/Blog/Results.jsx",
     "isEntry": true,
@@ -1229,7 +1226,7 @@
     ]
   },
   "resources/js/Components/Courses/Filter.jsx": {
-    "file": "assets/Filter-CeKzIQaI.js",
+    "file": "assets/Filter-B_CKjPyD.js",
     "name": "Filter",
     "src": "resources/js/Components/Courses/Filter.jsx",
     "isEntry": true,
@@ -1249,7 +1246,7 @@
     ]
   },
   "resources/js/Components/Courses/Results.jsx": {
-    "file": "assets/Results-2VX7jqO8.js",
+    "file": "assets/Results-eqHE1MS0.js",
     "name": "Results",
     "src": "resources/js/Components/Courses/Results.jsx",
     "isEntry": true,
@@ -1537,7 +1534,7 @@
     "isEntry": true
   },
   "resources/js/Components/form/CheckboxFormGroup.jsx": {
-    "file": "assets/CheckboxFormGroup-CeKzIQaI.js",
+    "file": "assets/CheckboxFormGroup-B_CKjPyD.js",
     "name": "CheckboxFormGroup",
     "src": "resources/js/Components/form/CheckboxFormGroup.jsx",
     "isEntry": true,
@@ -1547,7 +1544,7 @@
     ]
   },
   "resources/js/Components/form/InputFormGroup.jsx": {
-    "file": "assets/InputFormGroup-CeKzIQaI.js",
+    "file": "assets/InputFormGroup-B_CKjPyD.js",
     "name": "InputFormGroup",
     "src": "resources/js/Components/form/InputFormGroup.jsx",
     "isEntry": true,
@@ -1567,7 +1564,7 @@
     ]
   },
   "resources/js/Components/form/QuillFormGroup.jsx": {
-    "file": "assets/QuillFormGroup-B_CKjPyD.js",
+    "file": "assets/QuillFormGroup-CeKzIQaI.js",
     "name": "QuillFormGroup",
     "src": "resources/js/Components/form/QuillFormGroup.jsx",
     "isEntry": true,
@@ -1589,7 +1586,7 @@
     ]
   },
   "resources/js/Components/form/SelectFormGroup.jsx": {
-    "file": "assets/SelectFormGroup-B_CKjPyD.js",
+    "file": "assets/SelectFormGroup-CeKzIQaI.js",
     "name": "SelectFormGroup",
     "src": "resources/js/Components/form/SelectFormGroup.jsx",
     "isEntry": true,
@@ -1599,7 +1596,7 @@
     ]
   },
   "resources/js/Components/form/TextareaFormGroup.jsx": {
-    "file": "assets/TextareaFormGroup-B_CKjPyD.js",
+    "file": "assets/TextareaFormGroup-CeKzIQaI.js",
     "name": "TextareaFormGroup",
     "src": "resources/js/Components/form/TextareaFormGroup.jsx",
     "isEntry": true,
@@ -1638,7 +1635,7 @@
     ]
   },
   "resources/js/Contact.jsx": {
-    "file": "assets/Contact-Dub73PPd.js",
+    "file": "assets/Contact-B6W4Xhuz.js",
     "name": "Contact",
     "src": "resources/js/Contact.jsx",
     "isEntry": true,
@@ -1647,7 +1644,7 @@
       "_index-RYns6xqu.js",
       "_CreateReactScript-BERtc5uF.js",
       "resources/js/Utils/ReactAppend.jsx",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
       "_createLucideIcon-D_WcjKff.js",
       "resources/js/Components/Adminto/Basic/BasicEditing.jsx",
@@ -1667,7 +1664,7 @@
     ]
   },
   "resources/js/CourseDetails.jsx": {
-    "file": "assets/CourseDetails-DnM-4hzA.js",
+    "file": "assets/CourseDetails-CEyA2j-F.js",
     "name": "CourseDetails",
     "src": "resources/js/CourseDetails.jsx",
     "isEntry": true,
@@ -1676,7 +1673,7 @@
       "_index-RYns6xqu.js",
       "resources/js/Utils/ReactAppend.jsx",
       "_CreateReactScript-BERtc5uF.js",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_HtmlContent-Ca-OCC2e.js",
       "_main-BjVPLcVK.js",
       "_Number2Currency-e57Tgsuk.js",
@@ -1696,7 +1693,7 @@
     ]
   },
   "resources/js/Courses.jsx": {
-    "file": "assets/Courses-oVKa6enj.js",
+    "file": "assets/Courses-B6E-WWRn.js",
     "name": "Courses",
     "src": "resources/js/Courses.jsx",
     "isEntry": true,
@@ -1705,10 +1702,10 @@
       "_index-RYns6xqu.js",
       "resources/js/Utils/ReactAppend.jsx",
       "_CreateReactScript-BERtc5uF.js",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
       "_ArrayJoin-bqGYcnH1.js",
-      "_CourseCard-BX3udr4q.js",
+      "_CourseCard-Dbr2iNpW.js",
       "resources/js/Components/Adminto/Basic/BasicEditing.jsx",
       "_createLucideIcon-D_WcjKff.js",
       "_index-CXU7o9CY.js",
@@ -1728,7 +1725,7 @@
     ]
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-BMNIcuFb.js",
+    "file": "assets/Home-CkGYixg3.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -1736,14 +1733,14 @@
       "resources/js/Components/About/AboutHeader.jsx",
       "_index-RYns6xqu.js",
       "resources/js/Utils/ReactAppend.jsx",
-      "_Base-BLnXkbYR.js",
+      "_Base-CakaWnfB.js",
       "_CreateReactScript-BERtc5uF.js",
-      "_Weare-DRwFWhhG.js",
+      "_Weare-CRVT5KzF.js",
       "resources/js/Components/About/Strengths.jsx",
       "resources/js/Components/Home/Articles.jsx",
-      "_CourseCard-BX3udr4q.js",
+      "_CourseCard-Dbr2iNpW.js",
       "_ArrayDetails2Object-Bh0nNl8c.js",
-      "_PostCard-ez1ObF1s.js",
+      "_PostCard-DYNKYbXz.js",
       "_index-CXU7o9CY.js",
       "_tippy-react.esm-DYFqe69e.js",
       "resources/js/Components/Tailwind/Base.jsx",

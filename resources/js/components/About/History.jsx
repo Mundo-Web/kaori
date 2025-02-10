@@ -18,7 +18,7 @@ const History = ({ title, history }) => {
         <h3 className="text-4xl not-italic font-bold leading-10 text-slate-600 max-md:max-w-full">
           {em(title)}
         </h3>
-        <div className="flex flex-col mt-8 w-full text-xl leading-7 text-[color:var(--Woodsmoke-800,#2E405E)] max-md:max-w-full">
+        <div className="flex flex-col mt-8 w-full text-xl leading-7 text-[color:var(--Woodsmoke-800,#2E405E)] max-md:max-w-full text-justify">
           {em(history)}
         </div>
       </div>

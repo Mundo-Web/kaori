@@ -63,8 +63,9 @@ const Testimonies = ({ countries, details }) => {
     }
     const file = imageRef.current.files[0]
     if (file) {
-      const { thumbnail, type, ...rest } = await File.compress(file, { square: false })
-      formData.append('image', await File.fromURL(`data:${type};base64,${thumbnail}`))
+      // const { thumbnail, type, ...rest } = await File.compress(file, { square: false })
+      // formData.append('image', await File.fromURL(`data:${type};base64,${thumbnail}`))
+      formData.append('image', file);
     }
 
     const result = await testimoniesRest.save(formData)
@@ -96,7 +97,7 @@ const Testimonies = ({ countries, details }) => {
   }
 
   return (<>
-    <Table gridRef={gridRef} title={<BasicEditing correlative='testimonies' details={details}/>} rest={testimoniesRest}
+    <Table gridRef={gridRef} title={<BasicEditing correlative='testimonies' details={details} />} rest={testimoniesRest}
       toolBar={(container) => {
         container.unshift({
           widget: 'dxButton', location: 'after',
@@ -131,6 +132,10 @@ const Testimonies = ({ countries, details }) => {
                 className='avatar-xs rounded-circle'
                 src={`/api/testimonies/media/${data.image}`}
                 alt={data.name}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center'
+                }}
               />,
               <p className='mb-0' style={{ fontSize: "14px" }}>{data.name}</p>
             ], false))
@@ -177,7 +182,7 @@ const Testimonies = ({ countries, details }) => {
         <input ref={idRef} type='hidden' />
         <div className='col-12'>
           <div className='row'>
-            <ImageFormGroup eRef={imageRef} label='Imagen' col='col-sm-4 col-xs-12' aspect={1}/>
+            <ImageFormGroup eRef={imageRef} label='Imagen' col='col-sm-4 col-xs-12' aspect={1} />
             <div className='col-sm-8 col-xs-12'>
               <InputFormGroup eRef={nameRef} label='Autor' rows={2} required />
               <SelectFormGroup eRef={countryRef} label='Pais' required dropdownParent='#testimony-container'>

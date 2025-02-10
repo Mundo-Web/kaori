@@ -31,7 +31,7 @@ const CourseDetails = ({ course }) => {
               </span>
             </div>
             <div
-              className="mt-2 text-lg not-italic leading-8 text-[color:var(--Woodsmoke-800,#2E405E)] max-md:max-w-full"
+              className="mt-2 text-lg not-italic leading-8 text-[color:var(--Woodsmoke-800,#2E405E)] max-md:max-w-full text-justify"
             >
               {course.summary}
             </div>
@@ -53,7 +53,7 @@ const CourseDetails = ({ course }) => {
         </div>
       </div>
     </section>
-    <section className="relative p-[5%] max-w-6xl mx-auto max-md:flex max-md:flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-3 gap-[5%]">
+    <section className="relative p-[5%] max-w-[1340px] mx-auto max-md:flex max-md:flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-3 gap-[5%]">
       <div className="lg:col-span-2 w-full">
         <img
           className="w-full aspect-video rounded-lg object-cover object-center"
@@ -68,7 +68,9 @@ const CourseDetails = ({ course }) => {
           className="prose max-w-none ql-editor"
         >
           <h1 className="my-[5%] text-xl font-bold">Descripción</h1>
+          <div className="text-justify">
           <HtmlContent html={course.description} />
+          </div>
           <div
             className="p-6 text-sm rounded-lg bg-[color:var(--My-Sin-50,#FFFAEB)] text-[color:var(--Woodsmoke-800,#2E405E)] my-[5%]"
           >
@@ -84,7 +86,7 @@ const CourseDetails = ({ course }) => {
                   className="flex flex-1 gap-2 items-start basis-0 min-w-[240px]"
                 >
                   <i className="fas fa-check-circle w-6 text-[#F2930E] text-center mt-1" />
-                  <div className="flex-1 not-italic basis-0">
+                  <div className="flex-1 not-italic basis-0 text-justify">
                     {item}
                   </div>
                 </div>
@@ -100,7 +102,7 @@ const CourseDetails = ({ course }) => {
                 className="flex flex-1 gap-2 items-start basis-0 min-w-[240px]"
               >
                 <i className="mdi mdi-arrow-right w-6 text-pink-500 text-center" />
-                <div className="flex-1 not-italic basis-0">
+                <div className="flex-1 not-italic basis-0 text-justify">
                   {item}
                 </div>
               </div>
@@ -115,7 +117,7 @@ const CourseDetails = ({ course }) => {
                 className="flex flex-1 gap-2 items-start basis-0 min-w-[240px]"
               >
                 <i className="mdi mdi-circle-small w-6 font-bold text-center" />
-                <div className="flex-1 not-italic basis-0">
+                <div className="flex-1 not-italic basis-0 text-justify">
                   {item}
                 </div>
               </div>
@@ -134,11 +136,11 @@ const CourseDetails = ({ course }) => {
             </div>
           </div>
 
-          <div className="flex flex-col py-6 w-full text-sm tracking-normal leading-relaxed border-b border-solid border-b-[#CFD8E8]">
+          <div className="flex flex-col py-6 w-full text-sm tracking-normal leading-relaxed border-b border-solid border-b-[#CFD8E8] justify-start">
             <div className="flex gap-10 justify-between items-center w-full">
-              <div className="flex gap-2 items-center justify-between self-stretch my-auto text-[#2E405E]">
-                <i className="fas fa-clock w-6 text-center"></i>
-                <div className="self-stretch my-auto not-italic">
+              <div className="flex gap-2 items-center justify-start self-stretch my-auto text-[#2E405E]">
+                <i className="fas fa-clock w-6 text-start"></i>
+                <div className="self-start my-auto not-italic">
                   Duración del curso
                 </div>
               </div>
@@ -148,9 +150,9 @@ const CourseDetails = ({ course }) => {
             </div>
 
             <div className="flex gap-10 justify-between items-center mt-3 w-full">
-              <div className="flex gap-2 items-center justify-between self-stretch my-auto text-[#2E405E]">
-                <i className="fas fa-users w-6 text-center"></i>
-                <div className="self-stretch my-auto not-italic">
+              <div className="flex gap-2 items-center justify-start self-stretch my-auto text-[#2E405E]">
+                <i className="fas fa-users w-6 text-start"></i>
+                <div className="self-start my-auto not-italic">
                   Estudiantes matriculados
                 </div>
               </div>
@@ -163,7 +165,7 @@ const CourseDetails = ({ course }) => {
           <div className="flex flex-col justify-center py-6 w-full text-base font-medium tracking-normal leading-none text-white uppercase">
           <a href={`//wa.me/51945622983?text=${encodeURIComponent(`Estoy interesado en este curso:\n- ${course.name}`)}`} className="flex gap-2 justify-center items-center px-6 py-4 w-full rounded-3xl bg-[#2E405E] max-md:px-5" target="_blank">
               <div className="self-stretch my-auto">
-                Quiero el curso
+                Quiero inscribirme
               </div>
               <i className="mdi mdi-arrow-top-right"></i>
             </a>
@@ -178,7 +180,7 @@ const CourseDetails = ({ course }) => {
                 content.map(({ icon, text }, index) => {
                   return <div className="flex gap-3 items-center w-full">
                     <i className={`${icon || 'fas fa-cube'} w-6 text-center`}></i>
-                    <div className="flex-1 shrink self-stretch my-auto not-italic basis-0">
+                    <div className="flex-1 shrink self-stretch my-auto not-italic basis-0 text-justify">
                       {text}
                     </div>
                   </div>

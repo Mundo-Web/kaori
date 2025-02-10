@@ -13,7 +13,7 @@ const Testimonies = ({ testimonies, background = '#fbbf24', details }) => {
       <div className="col-span-full md:col-span-2 w-full flex items-center justify-center order-last md:order-first">
         <div className="relative flex grow justify-center md:justify-start p-[5%] pb-0 md:p-0 md:px-[5%]  md:h-[calc(100%+64px)] md:-mt-16">
           <img
-            src={testimonieImage}
+            src='/assets/resources/testimonies.png'
             alt="testimony"
             className="object-contain object-center md:object-left-bottom lg:object-bottom w-full max-w-md"
             style={{ aspectRatio: 1.125 }}
@@ -38,6 +38,7 @@ const Testimonies = ({ testimonies, background = '#fbbf24', details }) => {
 
         <Swiper
           modules={[Autoplay, Pagination]}
+          loop={true}
           autoplay={{
             delay: 3000, // Cambia el tiempo según sea necesario
             disableOnInteraction: false,

@@ -62,7 +62,7 @@ const Footer = ({ socials, summary, generals }) => {
           onSubmit={onEmailSubmit}>
           <div className="grid md:grid-cols-2 items-center gap-4">
             <h1 className="text-xl md:text-2xl">
-              Mantente siempre <b>Informado</b> con nuestra newsletter
+              Mantente siempre <b>Informado</b> con nuestra newsletter.
             </h1>
             <div>
               <input ref={emailRef} type="email" className="bg-transparent border-b border-b-[color:var(--Woodsmoke-900,#2B384F)] outline-none px-3 py-2 w-full placeholder-[color:var(--Woodsmoke-900,#2B384F)]" placeholder="Correo electrónico" disabled={saving} required />
@@ -76,7 +76,7 @@ const Footer = ({ socials, summary, generals }) => {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="flex flex-col gap-4 items-start justify-start">
             <img src="/assets/img/logo.svg" alt="" className="h-8" />
-            <p className="text-sm max-w-md">
+            <p className="text-sm max-w-md text-justify">
               {summary}
             </p>
           </div>
