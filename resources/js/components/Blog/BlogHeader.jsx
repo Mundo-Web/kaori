@@ -40,7 +40,7 @@ const BlogHeader = ({ categories }) => {
       <div className="w-full text-2xl lg:text-4xl font-medium text-pink-600">
         <span className="text-slate-700">Mantente siempre</span>{" "}
         <span className="font-bold text-pink-600">Informado</span>{" "}
-        <span className="text-slate-700">con nuestra newsletter</span>
+        <span className="text-slate-700">con nuestra newsletter.</span>
       </div>
       <div className="mt-10 w-full max-md:max-w-full">
         <div className="w-full max-md:max-w-full">
@@ -55,7 +55,7 @@ const BlogHeader = ({ categories }) => {
       </div>
       <div className="mt-10 text-base leading-6 text-slate-900 max-md:max-w-full">
         Suscríbete y sé el primero en enterarte de nuestras últimas publicaciones,
-        consejos y novedades directamente en tu bandeja de entrada
+        consejos y novedades.
       </div>
     </form>
   </section>

@@ -91,7 +91,7 @@ const Articles = ({ articles, details }) => {
           href="/blog"
           className="rounded-full px-4 py-1.5 bg-[#2e405e] text-white text-sm sm:text-base transition-colors duration-300 hover:bg-[#1f2b3e] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2e405e] cursor-pointer"
         >
-          Ver todas las noticias
+          VER TODAS LAS NOTICIAS
           <i className="mdi mdi-arrow-top-right ms-1"></i>
         </a>
       </div>
