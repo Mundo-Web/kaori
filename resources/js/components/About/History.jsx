@@ -9,7 +9,7 @@ const History = ({ title, history }) => {
     <section className="p-[5%] self-center w-full grid md:grid-cols-2 lg:grid-cols-5 gap-8 bg-white">
       <div className="lg:col-span-2">
         <img
-          src={historyImage}
+          src='/assets/resources/team.png'
           className="flex relative grow max-md:mt-10 max-md:max-w-full"
           style={{ objectFit: "contain", aspectRatio: 1.324 }}
         />

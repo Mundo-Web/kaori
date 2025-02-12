@@ -1,7 +1,7 @@
+import { ArrowUpRight, Mail, MessageSquare, User } from 'lucide-react';
 import React, { useRef, useState } from 'react';
-import { Mail, User, MessageSquare, ArrowUpRight } from 'lucide-react';
-import MessagesRest from '../../Actions/MessagesRest';
 import Swal from 'sweetalert2';
+import MessagesRest from '../../Actions/MessagesRest';
 
 const messagesRest = new MessagesRest()
 
@@ -47,8 +47,8 @@ const ContactForm = ({ }) => {
   return (
     <form className="w-full bg-slate-100 " onSubmit={onMessageSubmit}>
       <div className="w-full max-w-[1280px] p-[5%] mx-auto">
-        <h2 className="text-2xl font-medium text-[#2B384F] mb-4">
-          Pregúntanos cualquier cosa aquí
+        <h2 className="text-2xl font-medium text-[#2B384F] mb-6">
+          ¿Cómo podemos ayudarte?
         </h2>
         <div className="flex flex-col space-y-6 text-sm text-[#2E405E]" >
           <div className="flex flex-col md:flex-row gap-6 w-full">

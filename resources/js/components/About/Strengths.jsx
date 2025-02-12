@@ -1,17 +1,17 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import em from '../../Utils/em'
 
 const StrengthCard = ({ name, description }) => (
   <div className="p-5 bg-slate-100 w-full h-full">
     <div className="flex justify-between items-center w-full">
-      <h3 className="text-2xl font-medium tracking-tight text-gray-800">{name}</h3>
+      <h3 className="text-2xl font-medium tracking-tight text-gray-800 line-clamp-2 h-16">{name}</h3>
     </div>
     <hr className='my-4 border-[#F8B62C] border-2' />
-    <span className="text-sm text-gray-600 text-wrap">{description}</span>
+    <span className="text-sm text-gray-600 text-wrap text-justify block line-clamp-5">{description}</span>
   </div>
 )
 
@@ -28,7 +28,7 @@ const Strengths = ({ strength, strengths, details }) => {
             <h2 className="text-3xl md:text-4xl tracking-tighter leading-tight font-bold text-gray-600">
               {em(details['values.title'])}
             </h2>
-            <p className="mt-6 text-base md:text-lg leading-7 text-gray-600">
+            <p className="mt-6 text-base md:text-lg leading-7 text-gray-600 text-justify">
               {em(details['values.description'])}
             </p>
           </div>
@@ -59,15 +59,15 @@ const Strengths = ({ strength, strengths, details }) => {
               spaceBetween: 24,
             },
             768: {
-              slidesPerView: hasDetails  ?1: 2,
+              slidesPerView: hasDetails ? 1 : 2,
               spaceBetween: 30,
             },
             1024: {
-              slidesPerView: hasDetails? 2:3,
+              slidesPerView: hasDetails ? 2 : 3,
               spaceBetween: 32,
             },
             1280: {
-              slidesPerView: hasDetails?3 : 4,
+              slidesPerView: hasDetails ? 3 : 4,
               spaceBetween: 32,
             },
           }}
